@@ -25,12 +25,12 @@
 真的很蛋疼，官方博客里有篇“SSL 证书安装
 ”对于用Apache、Nginx和Tomcat的人很有帮助，对于go就莫名其妙了。
 
-官方案例中的代码
-<code>
+官方案例中的代码  
+```
 target, _ := url.Parse("https://127.0.1:443")  
-	go host.NewProxy("127.0.0.1:80", target).ListenAndServe()  
-	app.Run(iris.TLS("127.0.0.1:443", "mycert.cert", "mykey.key"))
-</code>
+go host.NewProxy("127.0.0.1:80",target).ListenAndServe()  
+app.Run(iris.TLS("127.0.0.1:443", "mycert.cert", "mykey.key"))
+```
 需要改成，其中mycert.cert是证书生成完页面的第二个文本框内容，自己复制出来保存成xxx.cert即可。
 <code>
 target, _ := url.Parse("https://localhost:443")  
