@@ -73,3 +73,12 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/go,macos,windows,visualstudiocode
+
+# Created by https://www.gitignore.io/api/hexo
+
+### Hexo ###
+db.json
+public/
+
+
+# End of https://www.gitignore.io/api/hexo

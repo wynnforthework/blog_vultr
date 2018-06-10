@@ -15,3 +15,25 @@
 - [ ] 增加前端页面写markdown
 - [ ] 用go写登录页面
 - [ ] 用go实现登录之后，在前端页面写markdown，并发布文章。
+
+# 遇到的问题
+
+1、freessl是一个很好的网站，生成证书很方便，但是语焉不详，生成完之后我一度一招莫展。  
+
+生成完证书后，页面出现了三个文本框，分别写着“CA证书”、“证书”和“私钥”，然后点击证书下载，下载到两个文件“full_chain.pem”和“private.key“。
+
+真的很蛋疼，官方博客里有篇“SSL 证书安装
+”对于用Apache、Nginx和Tomcat的人很有帮助，对于go就莫名其妙了。
+
+官方案例中的代码
+<code>
+target, _ := url.Parse("https://127.0.1:443")  
+	go host.NewProxy("127.0.0.1:80", target).ListenAndServe()  
+	app.Run(iris.TLS("127.0.0.1:443", "mycert.cert", "mykey.key"))
+</code>
+需要改成，其中mycert.cert是证书生成完页面的第二个文本框内容，自己复制出来保存成xxx.cert即可。
+<code>
+target, _ := url.Parse("https://localhost:443")  
+	go host.NewProxy("localhost:80", target).ListenAndServe()  
+	app.Run(iris.TLS(":443", "mycert.cert", "mykey.key"))
+</code>
