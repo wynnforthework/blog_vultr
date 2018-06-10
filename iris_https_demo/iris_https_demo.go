@@ -18,8 +18,8 @@ func main() {
 		ctx.Writef("Hello from the SECURE server on path /mypath")
 	})
 
-	target, _ := url.Parse("https://127.0.0.1:443")
-	go host.NewProxy("127.0.0.1:80", target).ListenAndServe()
+	target, _ := url.Parse("https://localhost:443")
+	go host.NewProxy("localhost:80", target).ListenAndServe()
 
-	app.Run(iris.TLS("127.0.0.1:443", "server.crt", "private.key"))
+	app.Run(iris.TLS("localhost:443", "server.crt", "private.key"))
 }
