@@ -1,0 +1,6 @@
+INFO  [7mHEXO-HELPER-LIVE2D[27m: Loaded model from npm-module(1), live2d-widget-model-epsilon2_1@1.0.5 from '/root/go/src/blog_vultr/blog/node_modules/live2d-widget-model-epsilon2_1/assets'
+INFO  [7mHEXO-HELPER-LIVE2D[27m: hexo-helper-live2d@3.0.3, using live2d-widget@^3.0.5.
+INFO  [7mHEXO-HELPER-LIVE2D[27m: use local live2d-widget@3.0.5
+INFO  Start processing
+INFO  Files loaded in 1.05 s
+INFO  0 files generated in 72 ms
